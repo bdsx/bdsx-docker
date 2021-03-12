@@ -3,7 +3,7 @@ EXPOSE 19132
 COPY ./entrypoint.sh /root/entrypoint.sh
 
 RUN apk update
-RUN apk add freetype git nodejs npm wine
+RUN apk add freetype git nodejs npm wine gnutls ncurses-libs
 
 WORKDIR /root
 RUN mkdir bdsx
