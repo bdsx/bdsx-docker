@@ -1,5 +1,5 @@
 FROM alpine
-EXPOSE 19132
+EXPOSE 19132/udp
 COPY ./entrypoint.sh /root/entrypoint.sh
 
 RUN apk update
