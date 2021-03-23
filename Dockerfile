@@ -10,6 +10,6 @@ RUN mkdir bdsx
 WORKDIR /root/bdsx
 RUN git init
 RUN git config pull.ff only
-RUN git remote add upstream https://github.com/karikera/bdsx.git
+RUN git remote add upstream https://github.com/bdsx/bdsx.git
 
 ENTRYPOINT /root/entrypoint.sh
