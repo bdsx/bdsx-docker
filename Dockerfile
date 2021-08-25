@@ -3,7 +3,9 @@ EXPOSE 19132/udp
 COPY ./entrypoint.sh /root/entrypoint.sh
 
 RUN apk update
-RUN apk add freetype git nodejs npm wine gnutls ncurses-libs
+RUN apk add freetype git nodejs npm wine gnutls ncurses-libs xvfb
+RUN Xvfb :0 &
+RUN export DISPLAY=:0
 
 WORKDIR /root
 RUN mkdir bdsx
